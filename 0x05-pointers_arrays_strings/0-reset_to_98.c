@@ -2,7 +2,7 @@
 
 /**
  * reset_to_98 - updates a value it points to to 98
- *pp  @n: address pointer n
+ * @n: address pointer n
  * Return: void
  */
 void reset_to_98(int *n)
