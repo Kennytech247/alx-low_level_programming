@@ -1,16 +1,24 @@
 #include "main.h"
 
 /**
- * swap_int - updates a value it points to to 98
- * @a: address pointer a
- * @b: address pointer b
- * Return: void
+ * _strncat - Concatenates two strings
+ *
+ * @dest: pointer to string to be appended to
+ * @src: pointer to string appended
+ * @n: n byte(s) to be used
+ *
+ * Return: pointer to resulting string @dest.
  */
-void swap_int(int *a, int *b)
+char *_strncat(char *dest, char *src, int n)
 {
-	int temp;
+	int i, j;
 
-	temp = *a;
-	*a = *b;
-	*b = temp;
+	for (i = 0; *(dest + i) != '\0'; i++)
+		;
+	for (j = 0; *(src + j) != *(src + n); j++)
+	{
+		*(dest + i) = *(src + j);
+		i++;
+	}
+	return (dest);
 }
